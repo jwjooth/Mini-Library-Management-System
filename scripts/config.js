@@ -1,9 +1,10 @@
-import { appVersion } from "./utils";
+import { appVersion } from "./utils.js";
 
 export const MAX_BORROW_LIMIT = 3;
 export const APP_ENV = "development";
-export default CONFIG = {
+const CONFIG = {
   appName: "Mini Library System",
   version: appVersion,
   maxBooks: MAX_BORROW_LIMIT,
 };
+export default CONFIG;
