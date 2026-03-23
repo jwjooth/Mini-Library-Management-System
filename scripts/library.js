@@ -1,7 +1,7 @@
-import { Book } from "./book";
-import { Member } from "./member";
-import { appVersion, formatDate, generateId, capitalizes } from "./utils";
-import { MAX_BORROW_LIMIT, APP_ENV } from "./config";
+import { Book } from "./book.js";
+import { Member } from "./member.js";
+import { appVersion, formatDate, generateId, capitalize } from "./utils.js";
+import { MAX_BORROW_LIMIT, APP_ENV } from "./config.js";
 
 export {
   Book,
@@ -9,7 +9,7 @@ export {
   appVersion,
   formatDate,
   generateId,
-  capitalizes,
+  capitalize,
   MAX_BORROW_LIMIT,
   APP_ENV,
 };

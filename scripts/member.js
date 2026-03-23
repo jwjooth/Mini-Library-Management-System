@@ -1,5 +1,3 @@
-import { Book } from "./book";
-
 class Member {
   constructor(name, memberId) {
     this.name = name;
