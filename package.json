@@ -1,0 +1,12 @@
+{
+  "name": "mini-library-management-system",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "scripts/main.js",
+  "scripts": {
+    "start": "node scripts/main.js"
+  },
+  "description": "Mini library management example",
+  "author": "",
+  "license": "MIT"
+}
