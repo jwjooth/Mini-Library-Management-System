@@ -8,15 +8,15 @@ class Book {
     this.isAvailable = true;
   }
   getInfo() {
-    return `[Book] ${this.title} by ${this.author} (${this.year})`;
+    console.log(`[Book] ${this.title} by ${this.author} (${this.year})`);
   }
   borrow() {
     this.isAvailable = false;
-    return `${this.title} has been borrowed.`;
+    console.log(`${this.title} has been borrowed.`);
   }
   returnBook() {
     this.isAvailable = true;
-    return `${this.title} has been returned.`;
+    console.log(`${this.title} has been returned.`);
   }
 }
 

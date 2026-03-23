@@ -1,5 +1,3 @@
-const anonFunc = function (level, message) {
-  return `[${level.toUpperCase()}] ${new Date().toLocaleTimeString()} - ${message}`;
+export default function anonFunc (level, message) {
+  console.log(`[${level.toUpperCase()}] ${new Date().toLocaleTimeString()} - ${message}`);
 };
-
-export default anonFunc;
