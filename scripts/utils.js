@@ -1,7 +1,7 @@
 const appVersion = "1.0.0";
 
 function formatDate(date) {
-  return date.toLocaleString("en-GB");
+  return date.toLocaleDateString("en-GB");
 }
 
 function generateId() {

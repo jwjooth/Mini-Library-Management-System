@@ -11,11 +11,22 @@ import {
 import aliasConfig from "./config.js";
 import aliasLog from "./logger.js";
 import { generateId as createId } from "./library.js";
-import * as Utils from "./utils.js";
 import { LIBRARY_NAME } from "./book.js";
 
+document.getElementById("loadReport").addEventListener("click", () => {
+  import("./book.js").then((module) => {
+    console.log("[Dynamic] Book module loaded on demand");
+    const dynamicBook = new module.Book(
+      "Design Patterns",
+      "Gang of Four",
+      1994,
+    );
+    dynamicBook.getInfo();
+  });
+});
+
 console.info("== 1 ==");
-console.log(aliasLog("info", "Application Started"));
+aliasLog("info", "Application Started");
 console.info("== 2 ==");
 console.log(aliasConfig.appName + " " + appVersion);
 console.info("== 3 ==");
@@ -33,11 +44,15 @@ member1.borrowBook(book2);
 console.info("== 7 ==");
 member2.borrowBook(book3);
 console.info("== 8 ==");
-member1.borrowBook(book3);
+if (!book3.isAvailable) {
+  aliasLog("warn", "Book not available.");
+} else {
+  member1.borrowBook(book3);
+}
 console.info("== 9 ==");
-console.log(member1.returnBook(book1));
+member1.returnBook(book1);
 console.info("== 10 ==");
-console.log(member1);
+member1.listBorrowedBooks();
 console.info("== 11 ==");
 console.log(formatDate(new Date()));
 console.info("== 12 ==");
