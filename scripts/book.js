@@ -12,11 +12,11 @@ class Book {
   }
   borrow() {
     this.isAvailable = false;
-    return `"${this.title} has been borrowed."`;
+    return `${this.title} has been borrowed.`;
   }
   returnBook() {
     this.isAvailable = true;
-    return `"${this.title} has been returned"`;
+    return `${this.title} has been returned.`;
   }
 }
 
